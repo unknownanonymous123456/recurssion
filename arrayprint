@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void printarr(vector<int>& arr, int i, int n) {
+    if (i == n)
+        return;
+
+    cout << arr[i] << " ";
+    printarr(arr, i + 1, n);
+}
+
+void printarrrev(vector<int>& arr, int i, int n) {
+    if (i == n)
+        return;
+
+    printarrrev(arr, i + 1, n);
+    cout << arr[i] << " ";
+}
+
+int main() {
+    vector<int> arr = {1, 2, 3, 4, 5};
+    int n = arr.size();
+    int i = 0;
+
+    printarr(arr, i, n);
+    cout << endl;
+
+    printarrrev(arr, i, n);
+    cout << endl;
+
+    return 0;
+}
